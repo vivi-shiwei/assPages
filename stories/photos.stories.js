@@ -45,7 +45,7 @@ const photot = () => {
         imageonOpen();
     };
     return (
-        <Layout>
+        <Layout h='full'>
             <Box mt={16} py={4}>
                 <Container>
                     <Heading textAlign='center' mb={10}>
@@ -84,6 +84,7 @@ const photot = () => {
                 p="0" >
                 <ModalOverlay />
                 <ModalContent bg="none" border="none" p="0">
+          <ModalCloseButton zIndex='4'/>
                     <ModalBody p="0" bg="none" border="none">
                         <Flex justify={{ base: 'none', sm: 'space-between' }}>
                             <AspectRatioBox ratio={4 / 2}

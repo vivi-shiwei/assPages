@@ -8,7 +8,8 @@ import {
     IconButton,
     Box,
     Image,
-    Button
+    Button,
+    Tooltip
 } from '@chakra-ui/core'
 
 import NextLink from 'next/link'
@@ -29,10 +30,10 @@ import MyImage6 from "../static/timg.jpg"
 
 const onFetchMore = () => {
     const clsMembers = [
-        { profilePhoto: MyImage, name: '1' },
-        { profilePhoto: MyImage3, name: '1' },
-        { profilePhoto: MyImage4, name: '1' },
-        { profilePhoto: MyImage6, name: '1' }
+        { profilePhoto: MyImage, name: 'vivi' },
+        { profilePhoto: MyImage3, name: 'vivi1' },
+        { profilePhoto: MyImage4, name: 'vivi2' },
+        { profilePhoto: MyImage6, name: 'vivi3' }
     ];
 
     const postsData = [
@@ -69,9 +70,12 @@ const onFetchMore = () => {
                                             borderRadius='50%'
                                         >
                                             {
-                                                items.profilePhoto && (<Image src={items.profilePhoto} 
+                                                items.profilePhoto && (
+                                                
+                    <Tooltip label={items.name} placement="left-end">
+                                                <Image src={items.profilePhoto} 
                                                     rounded="full"
-                                                    size="50px" />)
+                                                    size="50px" /></Tooltip>)
                                             }
                                         </Box>
                                     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/core'
+import { Box,Tooltip } from '@chakra-ui/core'
 
 const ClsImage = (props) => {
     return (
