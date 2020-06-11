@@ -28,9 +28,13 @@ import MyImage4 from "../static/timgXOPS3YTR.jpg"
 import MyImage6 from "../static/timg.jpg"
 
 const photot = () => {
-    const [isImageView, setImageView] = useState(false)
+    const [isImageView, setImageView] = useState('')
     const { isOpen: imageisOpen, onOpen: imageonOpen, onClose: imageonClose } = useDisclosure();
     const photos = [
+        { profilePhoto: MyImage },
+        { profilePhoto: MyImage3 },
+        { profilePhoto: MyImage4 },
+        { profilePhoto: MyImage6 },
         { profilePhoto: MyImage },
         { profilePhoto: MyImage3 },
         { profilePhoto: MyImage4 },
@@ -48,13 +52,13 @@ const photot = () => {
                         聖若瑟教區中學第一校的相簿
                     </Heading>
 
-                    <Flex maxW='879px' mx='auto' wrap='wrap' justifyContent='space-between'>
+                    <Flex minxW='879px' mx='auto' wrap='wrap' justifyContent='center'>
                         {photos.map(photo => (
-                            <Box w='205px' h='205px' mb='8px'>
-                                <AspectRatioBox width={{ base: '220px', sm: '234px', md: '275px' }} height={{ base: '210px', sm: '230px', md: '249px' }} ratio={4 / 2} m="1px" >
+                            <Box mb='8px'>
+                                <AspectRatioBox ratio={4 / 3} m="1px"  w={{base:'400px',sm:'213px',md:'205px'}}>
                                     <Image
                                         w='100%'
-                                        h='100%' src={photo.profilePhoto} alt="naruto" objectFit="cover" cursor='pointer' onClick={handleSizeClick(photo.profilePhoto)} />
+                                        h='100%' src={photo.profilePhoto} alt="naruto" objectFit="cover" cursor='pointer' onClick={()=>handleSizeClick(photo.profilePhoto)} />
                                 </AspectRatioBox>
                             </Box>
                         ))}

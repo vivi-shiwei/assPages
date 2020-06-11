@@ -17,7 +17,6 @@ const ClsImage = (props) => {
                     zIndex='2'
                     color='#718096'
                     background='#ebf8ff'
-                    onClick={() => { props.router() }}
                 >
                     <span>{props.title}</span>
                 </Box>

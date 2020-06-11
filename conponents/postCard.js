@@ -19,7 +19,7 @@ import Container from './container'
 const PostContent = ({ content }) => {
     return content.split('\n').map((line, i) => {
         return (
-            <Text key={i} fontSize='2xl'>
+            <Text fontSize='2xl'>
                 {line}
             </Text>
         )
