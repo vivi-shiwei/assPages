@@ -69,7 +69,9 @@ const onFetchMore = () => {
                                             borderRadius='50%'
                                         >
                                             {
-                                                items.profilePhoto && (<Image src={items.profilePhoto} />)
+                                                items.profilePhoto && (<Image src={items.profilePhoto} 
+                                                    rounded="full"
+                                                    size="50px" />)
                                             }
                                         </Box>
                                     )
