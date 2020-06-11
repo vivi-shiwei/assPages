@@ -52,7 +52,7 @@ const photot = () => {
                         聖若瑟教區中學第一校的相簿
                     </Heading>
 
-                    <Flex minxW='879px' mx='auto' wrap='wrap' justifyContent='center'>
+                    <Flex maxW='879px' mx='auto' wrap='wrap' justifyContent='center'>
                         {photos.map(photo => (
                             <Box mb='8px'>
                                 <AspectRatioBox ratio={4 / 3} m="1px"  w={{base:'400px',sm:'213px',md:'205px'}}>
@@ -78,7 +78,7 @@ const photot = () => {
                 onClose={imageonClose}
                 isOpen={imageisOpen}
                 isCentered
-                size={{ base: "500px", sm: "700px", md: "1000px" }}
+                size={{ base: "500px", sm: "600px", md: "800px" }}
                 bg="none"
                 border="none"
                 p="0" >
