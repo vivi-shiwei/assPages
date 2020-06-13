@@ -11,9 +11,9 @@ import {
 import NextLink from 'next/link'
 import moment from 'moment'
 
-import Layout from '../conponents/layout'
-import Container from '../conponents/container'
-import App from '../App'
+import { SchoolPage } from '../../components/layout'
+import Container from '../../components/container'
+import App from '../../App'
 
 const AssessmentReportsPage = () => {
     const assessmentReports = [
@@ -24,7 +24,7 @@ const AssessmentReportsPage = () => {
         { activeAt: '2020-06-11 16:10', inactiveAt: '2020-06-11 16:10', name: '2019-2020年度第一學段《幼兒基本學力要求》評估表(幼師班)' }
     ];
     return (
-        <Layout>
+        <SchoolPage>
             <Flex mt={16} align='center' justify='center'>
                 <Container width={{ sm: '100%', md: '75%' }} minHeight='1024px' bg='White'>
                     <Heading textAlign='center' mb='1' mt='5'>學習評估表列表</Heading>
@@ -53,7 +53,7 @@ const AssessmentReportsPage = () => {
                     })}
                 </Container>
             </Flex >
-        </Layout >
+        </SchoolPage >
     )
 }
 

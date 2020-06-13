@@ -18,14 +18,14 @@ import {
     AspectRatioBox
 } from '@chakra-ui/core'
 
-import Layout from '../conponents/layout'
-import Container from '../conponents/container'
-import App from '../App'
+import { SchoolPage } from '../../components/layout'
+import Container from '../../components/container'
+import App from '../../App'
 
-import MyImage from "../static/QQ20200518181405.jpg"
-import MyImage3 from "../static/timg8J2T10BJ.jpg"
-import MyImage4 from "../static/timgXOPS3YTR.jpg"
-import MyImage6 from "../static/timg.jpg"
+import MyImage from "../../static/QQ20200518181405.jpg"
+import MyImage3 from "../../static/timg8J2T10BJ.jpg"
+import MyImage4 from "../../static/timgXOPS3YTR.jpg"
+import MyImage6 from "../../static/timg.jpg"
 
 const photot = () => {
     const [isImageView, setImageView] = useState('')
@@ -45,7 +45,7 @@ const photot = () => {
         imageonOpen();
     };
     return (
-        <Layout h='full'>
+        <SchoolPage h='full'>
             <Box mt={16} py={4}>
                 <Container>
                     <Heading textAlign='center' mb={10}>
@@ -55,10 +55,10 @@ const photot = () => {
                     <Flex maxW='879px' mx='auto' wrap='wrap' justifyContent='center'>
                         {photos.map(photo => (
                             <Box mb='8px'>
-                                <AspectRatioBox ratio={4 / 3} m="1px"  w={{base:'400px',sm:'213px',md:'205px'}}>
+                                <AspectRatioBox ratio={4 / 3} m="1px" w={{ base: '400px', sm: '213px', md: '205px' }}>
                                     <Image
                                         w='100%'
-                                        h='100%' src={photo.profilePhoto} alt="naruto" objectFit="cover" cursor='pointer' onClick={()=>handleSizeClick(photo.profilePhoto)} />
+                                        h='100%' src={photo.profilePhoto} alt="naruto" objectFit="cover" cursor='pointer' onClick={() => handleSizeClick(photo.profilePhoto)} />
                                 </AspectRatioBox>
                             </Box>
                         ))}
@@ -84,7 +84,7 @@ const photot = () => {
                 p="0" >
                 <ModalOverlay />
                 <ModalContent bg="none" border="none" p="0">
-          <ModalCloseButton zIndex='4'/>
+                    <ModalCloseButton zIndex='4' />
                     <ModalBody p="0" bg="none" border="none">
                         <Flex justify={{ base: 'none', sm: 'space-between' }}>
                             <AspectRatioBox ratio={4 / 2}
@@ -96,7 +96,7 @@ const photot = () => {
                     </ModalBody>
                 </ModalContent>
             </Modal>
-        </Layout>
+        </SchoolPage>
     )
 }
 

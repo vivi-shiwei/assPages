@@ -16,17 +16,17 @@ import NextLink from 'next/link'
 import Style from 'style-it';
 import InfiniteScroll from 'react-infinite-scroller'
 
-import Layout from '../conponents/layout'
-import Container from '../conponents/container'
-import App from '../App'
-import ClsImage from '../conponents/clsImage'
-import PostCard from '../conponents/postCard'
-import AddRequiredCourse from '../conponents/addRequiredCourse'
+import { SchoolPage } from '../../components/layout'
+import Container from '../../components/container'
+import App from '../../App'
+import ClsImage from './clsImage'
+import PostCard from './postCard'
+import AddRequiredCourse from './addRequiredCourse'
 
-import MyImage from "../static/QQ20200518181405.jpg"
-import MyImage3 from "../static/timg8J2T10BJ.jpg"
-import MyImage4 from "../static/timgXOPS3YTR.jpg"
-import MyImage6 from "../static/timg.jpg"
+import MyImage from "../../static/QQ20200518181405.jpg"
+import MyImage3 from "../../static/timg8J2T10BJ.jpg"
+import MyImage4 from "../../static/timgXOPS3YTR.jpg"
+import MyImage6 from "../../static/timg.jpg"
 
 const onFetchMore = () => {
     const clsMembers = [
@@ -42,7 +42,7 @@ const onFetchMore = () => {
         { title: '訪談', name: 'vi vi', createdAt: '2020-06-11 17:11', content: '胡', profilePhoto: MyImage6 }
     ];
     return (
-        <Layout>
+        <SchoolPage>
             <Box mt={16} py={4}>
                 <Container>
                     <Box as='header' textAlign='center'>
@@ -71,11 +71,11 @@ const onFetchMore = () => {
                                         >
                                             {
                                                 items.profilePhoto && (
-                                                
-                    <Tooltip label={items.name} placement="left-end">
-                                                <Image src={items.profilePhoto} 
-                                                    rounded="full"
-                                                    size="50px" /></Tooltip>)
+
+                                                    <Tooltip label={items.name} placement="left-end">
+                                                        <Image src={items.profilePhoto}
+                                                            rounded="full"
+                                                            size="50px" /></Tooltip>)
                                             }
                                         </Box>
                                     )
@@ -133,7 +133,7 @@ const onFetchMore = () => {
           }
         `}
             </style>
-        </Layout >
+        </SchoolPage >
     )
 }
 

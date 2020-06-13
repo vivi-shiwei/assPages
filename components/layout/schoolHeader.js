@@ -23,10 +23,10 @@ import NextLink from 'next/link'
 import { AiOutlineLogout, AiOutlineDashboard, AiFillMessage } from 'react-icons/ai'
 import { IoMdPerson, IoMdNotifications, IoMdSearch, IoMdHome } from 'react-icons/io'
 import { MdDashboard } from 'react-icons/md'
-import Container from './container'
+import Container from '../container'
 
 
-import MyImage from "../static/QQ20200518181405.jpg"
+import MyImage from "../../static/QQ20200518181405.jpg"
 
 const Logo = () => (
   <Heading as='h1' size='lg' letterSpacing='-.1rem'>

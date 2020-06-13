@@ -5,7 +5,7 @@ const App = (Component) => {
 
     return (
         <ThemeProvider theme={theme}>
-            <CSSReset bg="blue.50" />
+            <CSSReset />
             <Component />
         </ThemeProvider>
     );

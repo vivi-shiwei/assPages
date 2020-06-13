@@ -11,9 +11,9 @@ import {
     useDisclosure,
     useToast
 } from '@chakra-ui/core'
-import Container from './container'
-import Fieldset from './fieldset'
-import SchoolCard from './schoolCard'
+import Container from '../../components/container'
+import Fieldset from '../../components/common/fieldset'
+import SchoolCard from '../../components/common/schoolCard'
 
 const AddRequiredCourse = (props) => {
 
